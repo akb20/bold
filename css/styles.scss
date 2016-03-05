@@ -1,0 +1,118 @@
+@import 'main';
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,700);
+@import url(https://fonts.googleapis.com/css?family=Varela+Round);
+// - - - Base Styles - - - //
+$highlight: #F70325;
+$text-color: #B7B7B7;
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+.wrapper {
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Varela Round', sans-serif;
+    color: $highlight;
+    font-size: 4em;
+}
+
+p {
+    font-size: 1.4em;
+    line-height: 1.6em;
+}
+
+// - - - Header Styles - - - //
+nav {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    background-color: #fff;
+    padding: 0 15%;
+    text-transform: uppercase;
+    .logo {
+        color: $highlight;
+        font-family: 'Varela Round', sans-serif;
+        flex: 1;
+        font-size: 3.2em;
+    }
+    li {
+        list-style: none;
+        float: right;
+    }
+    a {
+        font-size: 1.4em;
+        text-decoration: none;
+        color: $text-color;
+        margin-left: 25px;
+        &:hover {
+            color: $highlight;
+        }
+    }
+}
+
+.hero {
+    height: 800px;
+    background: url('../img/bg.jpg') no-repeat center center;
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+}
+
+// - - - Mission Styles - - - //
+.mission {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 0 25%;
+    height: 500px;
+    p {
+        color: $text-color;
+    }
+}
+
+// - - - About Styles - - - //
+.about {
+    height: 750px;
+    text-align: center;
+    padding: 0 15%;
+    color: lighten($highlight, 30%);
+    background-color: $highlight;
+    clip-path: polygon(0 0, 100% 4%, 100% 96%, 0 100%);
+    .section-title {
+        color: lighten($highlight, 30%);
+        padding: 130px 0 50px 0;
+    }
+}
+
+.about-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-one,
+.about-two,
+.about-three {
+    flex-basis: 31%;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: #fff;
+    .section-title {
+        padding: 100px 0 0 0;
+    }
+    p {
+        padding: 0 0 60px 0;
+        color: $text-color;
+    }
+    img {
+        margin-bottom: 5px;
+    }
+}
